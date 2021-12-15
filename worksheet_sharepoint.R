@@ -24,13 +24,18 @@ keyring::key_delete("icesSharePoint", "colin")
 
 # OK back to the work :)
 # set the site to save supplying in function calls
-options(icesSharePoint.site = "/ExpertGroups/WGMIXFISH-ADVICE")
+options(icesSharePoint.site = "/ExpertGroups/WGCSE")
 
 # find the directory we want to access
 spdir()
-spdir("2020 Meeting Documents/06. Data/FIDES")
+spdir("2021 Meeting Documents/06. Data")
 
-fnames <- spfiles(data_dir, full = TRUE)
-for (fname in fnames) {
-  spgetfile(fname, destdir = ".")
-}
+fnames <- spfiles("2021 Meeting Documents/06. Data", full = TRUE)
+
+spgetfile("2021 Meeting Documents/06. Data/nep.fu.13.zip", destdir = ".")
+
+
+
+#for (fname in fnames) {
+#  spgetfile(fname, destdir = ".")
+#}

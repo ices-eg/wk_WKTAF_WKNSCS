@@ -22,4 +22,5 @@ unzip("nep.fu.13.zip", exdir = "temp")
 
 file.copy("temp\\nep.fu.13_average_discards_2017-19\\data\\By gear.csv", "By_gear.csv")
 
-#unlink("temp")
+unlink("temp", recursive = TRUE)
+unlink("nep.fu.13.zip")
